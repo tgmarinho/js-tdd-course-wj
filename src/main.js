@@ -6,3 +6,5 @@ const c = 'lol';
 function sum() {
   return a + b + c;
 }
+
+sum();
