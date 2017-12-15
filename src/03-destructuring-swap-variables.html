@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>03 - Destructuring Swap Variables</title>
+</head>
+<body>
+</body>
+
+<script>
+    let a = 42;
+    let b = 21;
+    console.log("a: ", a);
+    console.log("b: ", b);
+    [a, b] = [b, a]
+    console.log("a: ", a);
+    console.log("b: ", b);
+
+
+    // forma tradicional de fazer troca de variavel
+
+    let c = 10;
+    let d = 30;
+
+    console.log("c: ", c);
+    console.log("d: ", d);
+
+
+    let temp;
+    temp = c;
+    c = d;
+    d = temp;
+
+    console.log("c: ", c);
+    console.log("d: ", d);
+
+      /*
+          com apenas um código posso fazer a troca:
+          [a, b] = [b, a]
+       /*
+
+
+</script>
+</html>

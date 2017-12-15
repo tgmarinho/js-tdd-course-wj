@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>01 - Shorthand Properties</title>
+</head>
+<body>
+</body>
+
+<script>
+    let firstName = 'Thiago';
+    let surname = 'Marinho';
+    let age = 30;
+    const person = {
+        firstName,
+        surname,
+        age,
+        hello() {
+            console.log(`Hello! ${firstName} ${surname} você tem ${age} anos vida`)
+            },
+        goodBye : function() {
+          console.log(`see you soon, Mr. ${surname}!`)
+        }
+
+    };
+
+    camiseta = ()  =>  {
+      console.log('compra essa camiseta pra mim!')
+    }
+    camiseta();
+
+
+    // shorhard permite escrever menos código, atribuindo o valor ao nome da variável e o nome do método também.
+    console.log(person);
+    person.hello();
+    person.goodBye();
+</script>
+</html>
