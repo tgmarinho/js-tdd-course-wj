@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>02 - Promises Example</title>
+</head>
+<body>
+</body>
+
+<script>
+    var posts = fetch('https://willianjusten.com.br/search.json');
+
+    // pending
+    // resolved
+    // rejected
+    console.log(posts);
+
+    posts
+        .then(data => data.json())
+        .then(data =>  data.map(post => console.log(post.title)))
+        .catch(errs => console.error(errs));
+
+
+    // posts
+    //     .then(data => data.json())
+    //     .then(data => data.map( title => console.log(title)))
+    //     .then(data => {
+    //         throw new Error('ocorreu algum erro!');
+    //     })
+    //     .catch(err => console.error(err));
+</script>
+</html>
