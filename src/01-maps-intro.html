@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>01 - Maps Intro</title>
+</head>
+<body>
+</body>
+
+<script>
+
+    // Map guarda chave/valor, vc pega o conteudo sempre informando a chave
+    let m = new Map();
+    m.set('Willian', 26);
+    m.set('Jonas', 22);
+    m.set('Godoy', 30);
+
+
+    console.log(m);
+
+    console.log(`quantidade de nomes: ${m.size}`);
+
+    const itPessoas = m.values(); // Map fornece um MapInterator no retorno do método values();
+
+    console.log(itPessoas);
+    for(idade of itPessoas) {
+      console.log(idade); // mostra o value
+    }
+
+
+    let mapaDeObjtos = new Map();
+    mapaDeObjtos.set('obj1', {name: 'Jorge', idade: 40});
+    mapaDeObjtos.set('obj2', {name: 'Augusto', idade: 42});
+    mapaDeObjtos.set('obj3', {name: 'Cráudio', idade: 29});
+
+    const iterator = mapaDeObjtos.values();
+    console.log(iterator.next());
+    for(obj of iterator) {
+      console.log(` O cabra ${obj.name} tem ${obj.idade} anos`);
+    }
+
+
+</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>01 - Generators Intro</title>
+</head>
+<body>
+</body>
+
+<script>
+
+    /*
+      Função Generator tem o * após a palavra reservada function
+      Em vez de ter um return terá um yield
+      A função é executada quando chamada através do método next()
+      o códido dentro da função é executado yield by yield através da chamada next()
+      Ela é bem parecida com iterator
+
+      Interassante para implementação de fluxos, na chamada na própria função.
+
+    */
+
+    function* genNames() {
+        console.log('Chamando primeiro nome!');
+        yield 'Willian';
+        console.log('Chamando segundo nome!');
+        yield 'Jonas';
+        console.log('Chamando terceiro nome!');
+        yield 'Gabriel';
+        console.log('apos o ultimo yield, sera que serei printado aqui?!');
+    }
+    const names = genNames(); // é um objeto Generator
+    console.log(names); // tem status suspend
+    console.log(typeof names) // é um objeto
+    console.log(names.next());
+    console.log(names.next());
+    console.log(names.next().value);
+    console.log(names.next())
+    console.log(names) // status closed
+</script>
+</html>
