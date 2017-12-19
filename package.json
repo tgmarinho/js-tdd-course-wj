@@ -4,6 +4,8 @@
   "description": "Nossa biblioteca do curso de JS com TDD na prática.",
   "main": "index.js",
   "scripts": {
+    "build": "./node_modules/.bin/webpack --colors --progress",
+    "watch": "npm run build -- --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "./node_modules/.bin/eslint src/*.js",
     "prepush": "npm run lint"
@@ -20,9 +22,15 @@
   "author": "Thiago Marinho <tgmarinho@gmail.com> (https://tgmarinho.com/)",
   "license": "MIT",
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015-native-modules": "^6.9.4",
     "eslint": "^4.13.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
-    "husky": "^0.14.3"
-  }
+    "husky": "^0.14.3",
+    "ramda": "^0.25.0",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {}
 }
