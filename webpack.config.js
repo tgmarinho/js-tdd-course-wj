@@ -3,9 +3,10 @@ const webpack = require('webpack');
 const nodeENV =  process.env.NODE_ENV || 'production'
 
 module.exports = {
+  devtool: 'source-map',
   entry: {
     // '/home/tgmarinho/Documents/workspace/js-tdd-course-wj/src/js-modulos/01-imports.js'
-    filename: './src/js-modulos/01-imports.js'
+    filename: './src/js-modulos/02-exports-imports.js'
   },
   output: {
     filename: './src/js-modulos/build.js'

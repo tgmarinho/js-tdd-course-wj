@@ -16,7 +16,7 @@ console.log(arr3);
 
 console.log(arr4);
 
-console.log(soma(3, 2));
+console.log(soma(78, 2));
 
 console.log(sub(3, 2));
 
