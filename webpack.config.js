@@ -1,4 +1,6 @@
 const webpack = require('webpack');
+// variavel que nao estiver definida sera production
+const nodeENV =  process.env.NODE_ENV || 'production'
 
 module.exports = {
   entry: {
@@ -21,6 +23,18 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    // remove comentários, minimifica, deixa arquivo mais enxuto
+    new webpack.optimize.UglifyJsPlugin({
+      compress: { warnings: false },
+      output: { comments: false },
+      sourceMap: true
+    }),
+    // criando meu  proprio plugin
+    new webpack.DefinePlugin({
+      'process.env' : {  NODE_ENV: JSON.stringify(nodeENV) }
+    })
+  ]
 
 }
