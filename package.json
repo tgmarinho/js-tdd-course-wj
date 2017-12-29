@@ -6,10 +6,11 @@
   "scripts": {
     "build": "./node_modules/.bin/webpack --colors --progress",
     "watch": "npm run build -- --watch",
-    "server":  "./node_modules/.bin/webpack-dev-server --open",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "./node_modules/.bin/webpack-dev-server --open",
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js",
     "lint": "./node_modules/.bin/eslint src/*.js",
     "prepush": "npm run lint"
+
   },
   "repository": {
     "type": "git",
@@ -26,10 +27,12 @@
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-es2015-native-modules": "^6.9.4",
+    "chai": "^4.1.2",
     "eslint": "^4.13.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
     "husky": "^0.14.3",
+    "mocha": "^4.1.0",
     "ramda": "^0.25.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
