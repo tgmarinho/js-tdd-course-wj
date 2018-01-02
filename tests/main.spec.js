@@ -1,34 +1,43 @@
+var expect = require('chai').expect;
+var calc = require('../src/main.js');
 
-// describe serve para separar classes e metodos
-// context serve para separar os casos de testes
-// it serve para executar o teste em si, ondo codificamos o comportamento do teste.
+describe('Calc', function () {
 
-describe('Main', function() {
-  describe('Method A', function() {
-    context('Case 1', function() {
-      it('should happen blabla', function() {
-        // espera que aconteça
-        // Entra de dados / método sum(2,2)
-        // Espera retornar (4) => true | (3) => false => broken test
-      });
+  //smoke test = teste mais simples, verifica funcionamento basico de um sistema, api, etc..
+
+  // CALC
+
+  // smoke test para verificar se temos os métodos da calculadora +,-,/,*
+
+  describe('Smoke tests', function () {
+
+    it('should exist the calc lib', function () {
+      expect(calc).to.exist;
+
     });
 
-    context('Case 2', function() {
-      it('should happen blabla', function() {
-        // espera que aconteça
-        // Entra de dados / método sum(2,2)
-        // Espera retornar (4) => true | (3) => false => broken test
-      });
-
-      it('should happen mimimi', function() {
-        // espera que aconteça
-        // Entra de dados / método sum(2,2)
-        // Espera retornar (4) => true | (3) => false => broken test
-      });
+    it('should exist the method `sum`', function () {
+      expect(calc.sum).to.exist;
+      expect(calc.sum).to.be.a('function');
     });
+
+    it('should exist the method `div`', function () {
+      expect(calc.div).to.exist;
+      expect(calc.div).to.be.a('function');
+    });
+
+    it('should exist the method `mult`', function () {
+      expect(calc.mult).to.exist;
+      expect(calc.mult).to.be.a('function');
+    });
+
+    it('should exist the method `sub`', function () {
+      expect(calc.sub).to.exist;
+      expect(calc.sub).to.be.a('function');
+    });
+
   });
 
-  describe('Method B', function() {
 
-  });
+
 });
