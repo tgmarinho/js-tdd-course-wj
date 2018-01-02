@@ -9,8 +9,8 @@
     "server": "./node_modules/.bin/webpack-dev-server --open",
     "test": "./node_modules/.bin/mocha tests/**/*.spec.js",
     "test:tdd": "./node_modules/.bin/mocha tests/**/*.spec.js --watch",
-    "lint": "./node_modules/.bin/eslint src/*.js"
-    // "prepush": "npm run lint"
+    "lint": "./node_modules/.bin/eslint src/*.js",
+    "prepush": "npm run lint --no-verify"
 
   },
   "repository": {
