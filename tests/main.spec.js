@@ -1,39 +1,37 @@
+/*
+
+Desafio FizzBuzz
+
+Escreva uma lib que receba um número e:
+
+Se o número for divisível por 3, no lugar do número escreva 'Fizz' - X
+Se o número for divisível por 5, no lugar do número escreva 'Buzz' - X
+Se o número for divisível por 3 e 5, no lugar do número escreva 'FizzBuzz' - X
+Se não for múltiplo de nada, retorna o número
+
+ */
+
 import { expect } from 'chai';
+import FizzBuzz from '../src/main';
 
-import { sum, sub, mult, div } from '../src/main';
+describe('FizzBuzz', () => {
 
-describe('Calc', () => {
-
-  //smoke test = teste mais simples, verifica funcionamento basico de um sistema, api, etc..
-
-  // CALC
-
-  // smoke test para verificar se temos os métodos da calculadora +,-,/,*
-
-  describe('Smoke tests', () => {
-
-     it('should exist the method `sum`', () => {
-      expect(sum).to.exist;
-      expect(sum).to.be.a('function');
-    });
-
-    it('should exist the method `div`', () => {
-      expect(div).to.exist;
-      expect(div).to.be.a('function');
-    });
-
-    it('should exist the method `mult`', () => {
-      expect(mult).to.exist;
-      expect(mult).to.be.a('function');
-    });
-
-    it('should exist the method `sub`', () => {
-      expect(sub).to.exist;
-      expect(sub).to.be.a('function');
-    });
-
+  it('should return `Fizz` when multiple of 3', () => {
+    expect(FizzBuzz(3)).to.be.equal('Fizz');
+    expect(FizzBuzz(6)).to.be.equal('Fizz');
   });
 
+  it('should return `Buzz` when multiple of 5', () => {
+    expect(FizzBuzz(5)).to.be.equal('Buzz');
+    expect(FizzBuzz(10)).to.be.equal('Buzz');
+  });
 
+  it('should return `FizzBuzz` when multiple of 3 and 5', () => {
+    expect(FizzBuzz(15)).to.be.equal('FizzBuzz');
+  });
 
+  it('should return the number when non-multiple', () => {
+    expect(FizzBuzz(7)).to.be.equal(7);
+    expect(FizzBuzz(11)).to.be.equal(11);
+  });
 });
