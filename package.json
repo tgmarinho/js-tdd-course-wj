@@ -11,7 +11,7 @@
     "test:tdd": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --watch",
     "test:coverage": "nyc npm test",
     "lint": "./node_modules/.bin/eslint src/*.js",
-    "prepush": "npm run lint $$ npm rum test:coverage"
+    "prepush": "npm run lint && npm run test:coverage"
   },
   "nyc": {
     "functions": 80,
